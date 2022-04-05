@@ -29,6 +29,15 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+feign:
+  client:
+    config:
+      inventoryService:
+        connectTimeout: 5000
+        readTimeout: 5000
+  circuitbreaker:
+    enabled: true
+
 management:
   endpoints:
     web:
